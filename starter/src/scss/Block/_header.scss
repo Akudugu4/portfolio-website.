@@ -1,0 +1,74 @@
+@use "../Utils/variables";
+@use "../Utils/mixins";
+
+header {
+    @include mixins.scroll_effect;
+    background-color: variables.$nav-bg-color;
+    color: variables.$nav-text-color;
+    padding: variables.$nav-padding;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background: #0A0A23;
+    transition: all 0.3s ease-in-out;
+    animation: stickyNav linear forwards;
+    width: 100%;
+    &.header--small {
+        height: 50px;
+    }
+    .header--small .nav {
+        padding: 0.5rem 2rem;
+    }
+    
+    .hamburger {
+        font-size: 1rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    
+
+    @include mixins.responsive-device(16px, 1.2);
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo {
+            height: 3rem;
+            padding-left: 0px;
+        }
+
+        &__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 1rem;
+
+            &__item {
+                margin: 0 10px;
+
+                &__link {
+                    color: variables.$nav-text-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header__title {
+    font-family: variables.$font-stack;
+    font-weight: variables.$font-weight;
+    font-size: variables.$font-size;
+    line-height: variables.$line-height;
+    margin: variables.$margin 0;
+}

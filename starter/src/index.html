@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/dist/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="body">
+  <div class="container">
+    <header class="header">
+      <nav class="nav">
+        <img class="nav__logo" src="./img/my_logo.png" alt="Logo" class="nav__logo">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#latest-projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="open navigation menu">☰</button>
+      </nav>
+    </header>
+    <main id="main">
+      <section id="bio-card" class="bio__card fade-in">
+        <img class="bio__image" src="./img/myPic.jpg" alt="Profile Picture">
+        <article class="bio__content">
+          <h2 class="bio__name bio_name--bold">About Me</h2>
+          <p class="bio_text">I`m a front-end developer with a proven track record in building responsive and accessible
+            web
+            interfaces
+            using HTML, CSS, JavaScript, and React.
+          </p>
+          <button class="bio_button bio__button--primary" id="contact-button">Contact Me</button>
+          <button class="bio_button bio__button--secondary" id="projects-button">View Projects</button>
+        </article>
+      </section>
+      <section id="latest-projects" class="latest-projects">
+        <h2 class="latest-projects__heading">Latest Projects</h2>
+        <div class="latest-projects__grid">
+          <article class="project__card">
+            <img src="https://placehold.co/200x110?text=Project1" alt="Project 1" class="project__image">
+            <h3 class="project-card__title">Portfolio Website</h3>
+            <p class="project-card__description">A personal site to showcase my skills, projects and resume</p>
+          </article>
+          <article class="project__card">
+            <img src="https://placehold.co/200x110?text=Project2" alt="Project 2" class="project__image">
+            <h3 class="project-card__title">Weather App</h3>
+            <p class="project-card__description">A web app that shows real-time weather by location.</p>
+          </article>
+          <article class="project__card">
+            <img src="https://placehold.co/200x110?text=Project3" alt="Project 3" class="project__image">
+            <h3 class="project-card__title">To-Do App</h3>
+            <p class="project-card__description">A task tracker build with React.</p>
+          </article>
+        </div>
+        <button class="latest-projects__button">View Projects</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">© 2025 Abdul-Latif Akudugu. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

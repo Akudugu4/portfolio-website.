@@ -1,0 +1,16 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+// Button styles
+
+.bio_button {
+    display: inline-flex;
+    margin: 5px;
+    @include mixins.button-style(variables.$primary-color, variables.$color);
+    .bio__button--primary {
+        @include mixins.button-style(#007bff, #fff);
+    }
+
+    .bio__button--secondary {
+        @include mixins.button-style(#6c757d, #fff);
+    }
+}
